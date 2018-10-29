@@ -21,6 +21,11 @@ namespace :db do
     Student.create_table
   end
   puts 'db changes migrated!'
+  
+  desc 'seed the database with some dummy data'
+  task :seed do
+    require_relative './db/seeds.rb'
+  end
 end
 
 task :environment do

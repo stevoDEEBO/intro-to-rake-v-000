@@ -20,6 +20,7 @@ namespace :db do
   task :migrate => :environment do
     Student.create_table
   end
+  puts 'db changes migrated!'
 end
 
 task :environment do
